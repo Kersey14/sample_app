@@ -149,12 +149,21 @@ aside {
 	margin-right: 10px;
 }
 
-/* forms */
-
-#yoba {
-	width: 50%;
+/* Users index */
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+  	overflow: auto;
+  	padding: 10px 0;
+  	border-top: 1px solid $grayLighter;
+  	&:last-child{
+  	  border-bottom: 1px solid $grayLighter;
+  	}
+  }
 }
 
+/* forms */
 #error_explanation {
 	color: #f00;
 	ul {
