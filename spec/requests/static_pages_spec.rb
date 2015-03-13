@@ -53,6 +53,17 @@ describe "StaticPages" do
           expect(page).to have_selector("li##{item.id}", text: item.content)
         end
       end
+
+      describe "follower/following counts" do
+        let(:other_user) { FactoryGirl.create(:user) }
+        before do
+          other_user.follow!(user)
+          visit root_path
+        end
+
+        it { should have_link("0 following", href: following_user_path(user)) }
+        it { should have_link("1 followers", href: followers_user_path(user)) }
+      end
     end
   end
 
@@ -82,6 +93,18 @@ describe "StaticPages" do
     let(:page_title) {'Contact'}
 
     it_should_behave_like "all static pages"
+  end
+
+  describe "micropost pagination" do
+    let(:user) { FactoryGirl.create(:user) }
+    before do
+      31.times { FactoryGirl.create(:micropost, user: user) }
+      sign_in user
+      visit root_path
+    end
+    after { user.microposts.destroy_all }
+
+    it { should have_selector("div.pagination") }
   end
 
 end

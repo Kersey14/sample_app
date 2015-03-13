@@ -144,10 +144,40 @@ aside {
   	}
 }
 
+.user_avatars {
+	overflow: auto;
+	margin-top: 10px;
+	.gravatar {
+		margin: 1px 1px;
+	}
+}
+
 .gravatar {
 	float: left;
 	margin-right: 10px;
 }
+
+.stats {
+	overflow: auto;
+	a {
+		float: left;
+		padding: 0 10px;
+		border-left: 1px solid $grayLighter;
+		color: gray;
+	&:first-child {
+		padding-left: 0;
+		border: 0;
+	}
+	&:hover {
+		text-decoration: none;
+		color: blue;
+	}
+}
+strong {
+	display: block;
+}
+}
+
 
 /* Users index */
 .users {
@@ -181,12 +211,20 @@ aside {
   color: $grayLighter
 }
 
+.countdown {
+  display: inline;
+  padding-left: 30px;
+  color: gray;
+}
+
 aside {
   textarea{
   	height: 150px;
   	margin-bottom: 5px;
   }
 }
+
+
 
 /* forms */
 #error_explanation {
