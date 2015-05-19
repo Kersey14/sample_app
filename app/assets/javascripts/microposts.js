@@ -3,7 +3,10 @@ function updateCountdown() {
 	var $countdown = $('.countdown');
 
 	//140 is the max message length
-	var remaining = 140 - $('#micropost_content').val().length;
+	var len = 140 - $('#micropost_content').val().length;
+
+	var remaining = len;
+	
 
 	if(remaining < 1)
 	{

@@ -208,7 +208,7 @@ strong {
 }
 
 .timestamp {
-  color: $grayLighter
+  color: #00e822
 }
 
 .countdown {
@@ -237,6 +237,20 @@ aside {
 
 .field_with_errors {
   @extend .has-error
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
 
 input[type="text"], input[type="password"], textarea, select, .uneditable-input {

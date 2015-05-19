@@ -1,0 +1,23 @@
+<div id="player" style="width:644px;height:376px;margin:0 auto;text-align:center"></div>
+
+<p id="streaminfo"></p>
+
+<script type="text/javascript">
+
+flowplayer("player", '<%= asset_path('flowplayer-3.2.18.swf') %>', {
+    clip: {
+        url: 'test',
+        live: true,
+        autoPlay: false,
+        scaling: "fit",
+        provider: "rtmp"
+    },
+    plugins: {
+        rtmp: {
+            url: '<%= asset_path('flowplayer.rtmp-3.2.13.swf') %>',
+            netConnectionUrl: "rtmp://" +"192.168.0.104"+ ":1935/live/"
+        }
+    }
+});
+
+</script>
