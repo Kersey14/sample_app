@@ -13,6 +13,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.14.0.rc1'
   gem 'umlify'
+  gem 'dotenv-rails'
 end
 
 group :test do
