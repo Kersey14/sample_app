@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
+@import "bootstrap/theme";
 
 /*mixins, variables, etc*/
 
@@ -263,4 +264,16 @@ input[type="text"], input[type="password"], textarea, select, .uneditable-input 
 
 input {
   height: auto !important;
+}
+
+#comments {
+  max-height: 200px;
+  overflow: scroll;
+}
+
+#player {
+  width:644px;
+  height:420px;
+  margin:0 auto;
+  text-align:left;
 }

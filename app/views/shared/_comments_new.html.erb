@@ -1,0 +1,17 @@
+<% if current_user %>
+
+    <!--<h1>Join the discussion!</h1>
+    !-->
+
+ 
+  <%= render 'shared/comments_form' %>
+  <div class="panel panel-default" id="comments">
+    <div class="panel-body">
+      <ul class="media-list">
+        <%= render @comments %>
+      </ul>
+    </div>
+  </div>
+<% else %>
+  <%= render 'shared/comments_welcome' %>
+<% end %>

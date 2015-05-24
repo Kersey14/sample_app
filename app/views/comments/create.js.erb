@@ -1,0 +1,7 @@
+Poller.clear();
+Poller.poll(0);
+<% if @comment.new_record? %>
+  alert('Your comment cannot be saved.');
+<% else %>
+  $('#comment_body').val('');
+<% end %>
